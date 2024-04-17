@@ -39,7 +39,7 @@ const GithubMain = () => {
             setUsername("ruslaRuslan");
           }}
         >
-          ruslaRuslan
+          Ruslan
         </button>
 
         <button
