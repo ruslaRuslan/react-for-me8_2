@@ -4,6 +4,7 @@ import About from "../pages/About";
 import Contact from "../pages/Contact/";
 import ObjectPage from "../pages/ObjectPage";
 import GithubMain from "../pages/Github";
+import FollowersGithub from "../pages/Github/Followers";
 
 const Routing = () => {
   return (
@@ -14,6 +15,8 @@ const Routing = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/context" element={<ObjectPage />} />
         <Route path="/github" element={<GithubMain />} />
+        <Route path="/github-follower/:username" element={<FollowersGithub />} />
+
 
       </Routes>
     </>

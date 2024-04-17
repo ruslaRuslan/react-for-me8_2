@@ -80,7 +80,7 @@ const GithubMain = () => {
         <p>
           <b>Follower count:</b>
           {data.followers}{" "}
-          <a target="blank" href={data.followers_url}>
+          <a target="blank" href={`./github-followers/${username}`}>
             link
           </a>
         </p>
