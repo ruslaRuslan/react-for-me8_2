@@ -2,13 +2,12 @@ import { useEffect } from "react";
 import styles from "./index.module.css";
 import axios from "axios";
 
-const API_GITHUB_URL = 'https://api.github.com/users/Ali-GreenHeart'
+const API_GITHUB_URL = "https://api.github.com/users/Ali-GreenHeart";
 
 const GithubMain = () => {
-
-  useEffect(()=>{
-
-  },[])
+  useEffect(() => {
+    axios.get(API_GITHUB_URL)
+  }, []);
 
   return (
     <>
