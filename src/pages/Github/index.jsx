@@ -23,12 +23,10 @@ const GithubMain = () => {
         <p><b>Name:</b>{data.name}</p>
         <p><b>Bio:</b>{data.bio}</p>
         <p><b>Location:</b>{data.location}</p>
-        <p><b>Follower count:</b>{data.followers} <a href={data.followers_url}>link</a></p>
-        <p><b></b><img style={{with:150, height: 150}} src={data.avatar_url} alt="" /></p>
-        <p></p>
-        <p><b>to account:</b>{data.html_url}</p>
-        <p><b>to repos:</b>{data.repos_url}</p>
-        <p>{data.bio}</p>
+        <p><b>Follower count:</b>{data.followers} <a target='blank' href={data.followers_url}>link</a></p>
+        <p><b>Image:</b><img style={{with:150, height: 150}} src={data.avatar_url} alt="" /></p>
+        <p><b>to account:</b><a target='blank' href={data.html_url}>link</a></p>
+        <p><b>to repos:</b><a target='blank' href={data.repos_url}>link</a></p>
       </div>
     </>
   );
