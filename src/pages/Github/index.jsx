@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styles from "./index.module.css";
 import axios from "axios";
 
@@ -11,20 +11,25 @@ async function getData(username) {
 
 const GithubMain = () => {
   const [data, setData] = useState({});
-  const [username, setUsername] = useState("Ali-GreenHeart");
+  // const [username, setUsername] = useState('');
 
+  const inputRef = useRef();
   return (
     <>
       <div className={styles.inputContainer}>
         <input
           type="text"
-          onChange={(e) => {
-            setUsername(e.target.value);
-          }}
+          ref={inputRef}
+          // value={username}
+          // onChange={(e) => {
+          //   setUsername(e.target.value);
+
+          // }}
         />
         <button
           onClick={() => {
-            getData(username).then((data) => {
+            console.log(inputRef);
+            getData(inputRef.current.value).then((data) => {
               setData(data);
             });
           }}
