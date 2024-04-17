@@ -5,8 +5,8 @@ import axios from "axios";
 const API_GITHUB_URL = "https://api.github.com/users/Ali-GreenHeart";
 
 async function getData(username) {
-  
-  axios.get(API_GITHUB_URL).then(({ data }) => {
+
+ await axios.get(API_GITHUB_URL).then(({ data }) => {
     setData(data);
   });
 }
