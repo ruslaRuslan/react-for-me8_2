@@ -6,7 +6,7 @@ const GithubMain = () => {
         <input type="text" />
         <button>search</button>
       </div>
-      <div>
+      <div className={styles.dataContainer}>
         <p>avatar_url</p>
         <p>html_url</p>
         <p>followers_url</p>
