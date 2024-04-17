@@ -11,15 +11,16 @@ async function getData(username) {
 
 const GithubMain = () => {
   const [data, setData] = useState({});
-  const [username, setUsername] = useState('Ali-GreenHeart');
+  const [username, setUsername] = useState("Ali-GreenHeart");
 
   return (
     <>
       <div className={styles.inputContainer}>
-        <input type="text"
-        onChange={(e)=>{
-console.log(e);
-        }}
+        <input
+          type="text"
+          onChange={(e) => {
+            setUsername(e.target.value);
+          }}
         />
         <button
           onClick={() => {
