@@ -5,8 +5,13 @@ import axios from "axios";
 const API_GITHUB_URL = "https://api.github.com/users/Ali-GreenHeart";
 
 const GithubMain = () => {
+
+  const [data, setData] = useState({});
+
   useEffect(() => {
-    axios.get(API_GITHUB_URL)
+    axios.get(API_GITHUB_URL).then(({ data }) => {
+      
+    });
   }, []);
 
   return (
