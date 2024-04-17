@@ -6,7 +6,7 @@ const API_GITHUB_URL = "https://api.github.com/users/Ali-GreenHeart";
 
 const GithubMain = () => {
   const [data, setData] = useState({});
-const [] = useState('')
+const [username, setUsername] = useState('')
 
 
   useEffect(() => {
