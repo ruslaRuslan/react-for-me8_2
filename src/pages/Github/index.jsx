@@ -1,5 +1,4 @@
-import React from 'react'
-
+import styles from './index.module.css'
 const GithubMain = () => {
   return (
    <>
@@ -9,7 +8,7 @@ const GithubMain = () => {
         <button>search</button>
     </div>
     <div>
-        
+
     </div>
     </>
   )
