@@ -15,9 +15,10 @@ const Routing = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/context" element={<ObjectPage />} />
         <Route path="/github" element={<GithubMain />} />
-        <Route path="/github-follower/:username" element={<FollowersGithub />} />
-
-
+        <Route
+          path="/github-followers/:username"
+          element={<FollowersGithub />}
+        />
       </Routes>
     </>
   );
