@@ -1,6 +1,6 @@
-import { useState, useRef } from "react";
-import styles from "./index.module.css";
 import axios from "axios";
+import styles from "./index.module.css";
+import { useState } from "react";
 
 const API_GITHUB_URL = "https://api.github.com/users/";
 
@@ -11,30 +11,57 @@ async function getData(username) {
 
 const GithubMain = () => {
   const [data, setData] = useState({});
-  // const [username, setUsername] = useState('');
+  const [username, setUsername] = useState("");
 
-  const inputRef = useRef();
   return (
     <>
       <div className={styles.inputContainer}>
         <input
           type="text"
-          ref={inputRef}
-          // value={username}
-          // onChange={(e) => {
-          //   setUsername(e.target.value);
-
-          // }}
+          value={username}
+          onChange={(e) => {
+            setUsername(e.target.value);
+          }}
         />
         <button
           onClick={() => {
-            console.log(inputRef);
-            getData(inputRef.current.value).then((data) => {
+            getData(username).then((data) => {
               setData(data);
             });
           }}
         >
           search
+        </button>
+      </div>
+      <div>
+        <button
+          onClick={() => {
+            setUsername("ruslaRuslan");
+          }}
+        >
+          ruslaRuslan
+        </button>
+
+        <button
+          onClick={() => {
+            setUsername("Sada-Shukurova");
+          }}
+        >
+          Sada
+        </button>
+        <button
+          onClick={() => {
+            setUsername("farid-hashimzada");
+          }}
+        >
+          farid
+        </button>
+        <button
+          onClick={() => {
+            setUsername("shumalov0");
+          }}
+        >
+          intiqam
         </button>
       </div>
       <div className={styles.dataContainer}>
