@@ -2,8 +2,7 @@ import styles from './index.module.css'
 const GithubMain = () => {
   return (
    <>
-    
-    <div>
+    <div className={styles.inputContainer}>
         <input type="text" />
         <button>search</button>
     </div>
