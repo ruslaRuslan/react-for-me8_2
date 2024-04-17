@@ -17,7 +17,9 @@ const GithubMain = () => {
     <>
       <div className={styles.inputContainer}>
         <input type="text"
-        
+        onChange={(e)=>{
+console.log(e);
+        }}
         />
         <button
           onClick={() => {
